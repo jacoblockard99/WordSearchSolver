@@ -1,5 +1,6 @@
 using System;
 using System.Text;
+using System.Text.Json.Serialization;
 
 namespace WordSearchSolver
 {
@@ -17,6 +18,12 @@ namespace WordSearchSolver
         /// The error message to use when zero is provided for the width or height of the word search.
         /// </summary>
         public const string ZeroSizeError = "The character grid's dimensions must be greater than zero!";
+
+        /// <summary>
+        /// The error message to use when an out-of-bounds word location is provided.
+        /// </summary>
+        public const string LocationOutOfBoundsError = "The provided word location is out of bounds of this word " +
+                                                       "search!";
 
         /// <summary>
         /// The character that is regarded as a "blank" entry in a word search.
@@ -61,6 +68,33 @@ namespace WordSearchSolver
             // Ensure valid dimensions.
             if (width <= 0)  throw new ArgumentOutOfRangeException(nameof(width),  ZeroSizeError);
             if (height <= 0) throw new ArgumentOutOfRangeException(nameof(height), ZeroSizeError);
+        }
+
+        /// <summary>
+        /// Gets the word in this <see cref="WordSearch"/> at the given <see cref="WordLocation"/>.
+        /// </summary>
+        /// <param name="location">A <see cref="WordLocation"/> instance representing the location of the word.</param>
+        /// <returns>A <see cref="string"/> containing the requested word.</returns>
+        public string GetWord(WordLocation location)
+        {
+            // Ensure that both the start and end locations of the word are in bounds.
+            ValidateLocation(location.StartRow, location.StartCol);
+            ValidateLocation(location.EndRow, location.EndCol);
+            
+            var result = new StringBuilder();
+            
+            // Iterate through each character in the requested word.
+            for (var n = 0; n < location.Length; n++)
+            {
+                // For each character, calculate its row and column.
+                var row = location.StartRow + location.DirectionY * n;
+                var col = location.StartCol + location.DirectionX * n;
+                
+                // Append the calculated character to the result.
+                result.Append(Chars[row, col]);
+            }
+
+            return result.ToString();
         }
 
         /// <summary>
@@ -114,6 +148,18 @@ namespace WordSearchSolver
             }
 
             return result.ToString();
+        }
+
+        /// <summary>
+        /// Ensures the the given character location is not outside this word search.
+        /// </summary>
+        /// <param name="row">The row of the character.</param>
+        /// <param name="col">The column of the character.</param>
+        /// <exception cref="ArgumentOutOfRangeException">If the given location is outside this word search.</exception>
+        private void ValidateLocation(int row, int col)
+        {
+            if (row >= Height) throw new ArgumentException(LocationOutOfBoundsError);
+            if (col >= Width)  throw new ArgumentException(LocationOutOfBoundsError);
         }
     
         /// <summary>

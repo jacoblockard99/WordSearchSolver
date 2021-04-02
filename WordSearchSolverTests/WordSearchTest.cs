@@ -70,6 +70,50 @@ namespace WordSearchSolverTests
             Assert.Equal(4, w.Height);
         }
         
+        // .GetWord()
+
+        [Fact]
+        public void GetWord_GivenOutOfBoundsStart_ThrowsProperException()
+        {
+            var w = new WordSearch(ThreeByFourGrid());
+            var l = new WordLocation(3, 4, -1, -1, 1);
+            var e = Assert.Throws<ArgumentException>(() => w.GetWord(l));
+            Assert.Equal(WordSearch.LocationOutOfBoundsError, e.Message);
+        }
+
+        [Fact]
+        public void GetWord_GivenTooLongWord_ThrowsProperException()
+        {
+            var w = new WordSearch(ThreeByFourGrid());
+            var l = new WordLocation(0, 0, 1, 1, 10);
+            var e = Assert.Throws<ArgumentException>(() => w.GetWord(l));
+            Assert.Equal(WordSearch.LocationOutOfBoundsError, e.Message);
+        }
+
+        [Fact]
+        public void GetWord_GivenOneLengthWordLocation_ReturnsTheSingleCharacter()
+        {
+            var w = new WordSearch(ThreeByFourGrid());
+            w.Chars[1, 1] = 'A';
+            var l = new WordLocation(1, 1, 1, 1, 1);
+            Assert.Equal("A", w.GetWord(l));
+        }
+
+        [Fact]
+        public void GetWord_GivenTypicalWordLocation_ReturnsProperWord()
+        {
+            var w = new WordSearch(new[,]
+            {
+                {'a', 'b', 'c', 'd'},
+                {'e', 'f', 'g', 'h'},
+                {'i', 'j', 'k', 'l'},
+                {'m', 'n', 'o', 'p'},
+                {'q', 'r', 's', 't'}
+            });
+            var l = new WordLocation(2, 1, 1, 1, 3);
+            Assert.Equal("jot", w.GetWord(l));
+        }
+        
         // .Format()
 
         [Fact]
