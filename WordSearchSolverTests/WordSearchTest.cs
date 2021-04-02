@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using WordSearchSolver;
 using Xunit;
 
@@ -146,6 +147,138 @@ namespace WordSearchSolverTests
             var w = new WordSearch(ThreeByFourGrid());
             var expected = "a   b   c\n\n\nd   e   f\n\n\ng   h   i\n\n\nj   k   l";
             Assert.Equal(expected, w.Format(3, 2));
+        }
+        
+        // .Parse()
+        
+        [Fact]
+        public void Parse_WithNoLines_ThrowsAppropriateException()
+        {
+            var e = Assert.Throws<ArgumentException>(() => WordSearch.Parse(new List<string>()));
+            Assert.Equal($"{WordSearch.EmptyGridError} (Parameter 'lines')", e.Message);
+        }
+
+        [Fact]
+        public void Parse_WithOneLineAndAllKeepable_ParsesCorrectly()
+        {
+            var w = WordSearch.Parse(new List<string> { "abcd" });
+            
+            Assert.Equal(1, w.Height);
+            Assert.Equal(4, w.Width);
+            
+            Assert.Equal('a', w.Chars[0, 0]);
+            Assert.Equal('b', w.Chars[0, 1]);
+            Assert.Equal('c', w.Chars[0, 2]);
+            Assert.Equal('d', w.Chars[0, 3]);
+        }
+
+        [Fact]
+        public void Parse_WithMultipleLinesAndAllKeepable_ParsesCorrectly()
+        {
+            var w = WordSearch.Parse(new List<string>
+            {
+                "abcd",
+                "efgh",
+                "ijkl",
+                "mnop",
+                "qrst"
+            });
+            
+            Assert.Equal(5, w.Height);
+            Assert.Equal(4, w.Width);
+            
+            Assert.Equal('a', w.Chars[0, 0]);
+            Assert.Equal('k', w.Chars[2, 2]);
+            Assert.Equal('t', w.Chars[4, 3]);
+        }
+
+        [Fact]
+        public void Parse_WithOneLineWithExtraneousChars_ParsesCorrectly()
+        {
+            var w = WordSearch.Parse(new List<string> {"a  b c\tde  "});
+            
+            Assert.Equal(1, w.Height);
+            Assert.Equal(5, w.Width);
+            
+            Assert.Equal('a', w.Chars[0, 0]);
+            Assert.Equal('b', w.Chars[0, 1]);
+            Assert.Equal('c', w.Chars[0, 2]);
+            Assert.Equal('d', w.Chars[0, 3]);
+            Assert.Equal('e', w.Chars[0, 4]);
+        }
+
+        [Fact]
+        public void Parse_WithMultipleLinesWithExtraneousCharsNoExtraneousLines_ParsesCorrectly()
+        {
+            var w = WordSearch.Parse(new List<string>
+            {
+                "a\tbcd",
+                "ef\tg   h",
+                " i j k l",
+                "\tm\tn\to\tp",
+                "q     r    s  t   "
+            });
+            
+            Assert.Equal(5, w.Height);
+            Assert.Equal(4, w.Width);
+            
+            Assert.Equal('a', w.Chars[0, 0]);
+            Assert.Equal('k', w.Chars[2, 2]);
+            Assert.Equal('t', w.Chars[4, 3]);
+        }
+
+        [Fact]
+        public void Parse_WithMultipleLinesWithExtraneousCharsAndLines_ParsesCorrectly()
+        {
+            var w = WordSearch.Parse(new List<string>
+            {
+                "  ",
+                "a\tbcd",
+                "",
+                "ef\tg   h",
+                "\t  ",
+                "   ",
+                "",
+                " i j k l",
+                "\tm\tn\to\tp",
+                "\t\t\t",
+                "q     r    s  t   "
+            });
+            
+            Assert.Equal(5, w.Height);
+            Assert.Equal(4, w.Width);
+            
+            Assert.Equal('a', w.Chars[0, 0]);
+            Assert.Equal('k', w.Chars[2, 2]);
+            Assert.Equal('t', w.Chars[4, 3]);
+        }
+
+        [Fact]
+        public void Parse_WithJaggedGridGreaterThanFirst_ThrowsProperException()
+        {
+            var input = new List<string>
+            {
+                "a b c d",
+                "e f g h",
+                "i j k l m",
+                "n o m q"
+            };
+            var e = Assert.Throws<FormatException>(() => WordSearch.Parse(input));
+            Assert.Equal(WordSearch.JaggedGridError, e.Message);
+        }
+        
+        [Fact]
+        public void Parse_WithJaggedGridLessThanFirst_ThrowsProperException()
+        {
+            var input = new List<string>
+            {
+                "a b c d",
+                "e f g h",
+                "i j k",
+                "n o m q"
+            };
+            var e = Assert.Throws<FormatException>(() => WordSearch.Parse(input));
+            Assert.Equal(WordSearch.JaggedGridError, e.Message);
         }
     }
 }

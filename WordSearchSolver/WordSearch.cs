@@ -1,6 +1,9 @@
 using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using System.Text.Json.Serialization;
+using Microsoft.CSharp.RuntimeBinder;
 
 namespace WordSearchSolver
 {
@@ -24,6 +27,16 @@ namespace WordSearchSolver
         /// </summary>
         public const string LocationOutOfBoundsError = "The provided word location is out of bounds of this word " +
                                                        "search!";
+
+        /// <summary>
+        /// The error message to use when an empty grid is parsed.
+        /// </summary>
+        public const string EmptyGridError = "The provided list of lines cannot be empty!";
+
+        /// <summary>
+        /// The error message to use when a jagged grid is parsed.
+        /// </summary>
+        public const string JaggedGridError = "The character grid cannot be jagged!";
 
         /// <summary>
         /// The character that is regarded as a "blank" entry in a word search.
@@ -68,6 +81,17 @@ namespace WordSearchSolver
             // Ensure valid dimensions.
             if (width <= 0)  throw new ArgumentOutOfRangeException(nameof(width),  ZeroSizeError);
             if (height <= 0) throw new ArgumentOutOfRangeException(nameof(height), ZeroSizeError);
+        }
+
+        /// <summary>
+        /// Determines whether the given coordinates are within the bounds of this word search.
+        /// </summary>
+        /// <param name="row">The row to check.</param>
+        /// <param name="col">The column to check.</param>
+        /// <returns>True if the given coordinate is in-bounds; false otherwise.</returns>
+        public bool InBounds(int row, int col)
+        {
+            return row >= 0 && col >= 0 && row < Height && col < Width;
         }
 
         /// <summary>
@@ -124,7 +148,7 @@ namespace WordSearchSolver
 
             return result.ToString();
         }
-
+        
         /// <summary>
         /// Gets a <see cref="string"/> representation of a single row of this <see cref="WordSearch"/>.
         /// </summary>
@@ -161,6 +185,66 @@ namespace WordSearchSolver
             if (row >= Height) throw new ArgumentException(LocationOutOfBoundsError);
             if (col >= Width)  throw new ArgumentException(LocationOutOfBoundsError);
         }
+
+        /// <summary>
+        /// Attempts to parse the given list of lines into a <see cref="WordSearch"/> object.
+        /// </summary>
+        /// <param name="lines">The list of lines to parse.</param>
+        /// <returns>The parsed <see cref="WordSearch"/> object.</returns>
+        /// <exception cref="ArgumentException">If the lines list is empty.</exception>
+        /// <exception cref="FormatException">If the input was badly formatted.</exception>
+        public static WordSearch Parse(IEnumerable<string> lines)
+        {
+            var chars = ParseCharacters(lines);
+
+            // Check if any rows got added. If not, throw an appropriate exception.
+            if (chars.Count == 0) throw new ArgumentException(EmptyGridError, nameof(lines));
+
+            // Determine the height of the parsed word search.
+            var height = chars.Count;
+            // Determine the width of the parsed word search using the first row.
+            var width = chars[0].Count;
+            
+            // Instantiate a new WordSearch that will be populated with the data from chars.
+            var wordSearch = new WordSearch(width, height);
+
+            // Iterate over ever row in the chars list.
+            for (var row = 0; row < chars.Count; row++)
+            {
+                // If the current row's length is different from the first one, then the grid is jagged. Throw an
+                // appropriate exception.
+                if (chars[row].Count != width) throw new FormatException(JaggedGridError);
+                
+                // Iterate over each character in the current row, adding it to the word search.
+                for (var col = 0; col < chars[row].Count; col++)
+                    wordSearch.Chars[row, col] = chars[row][col];
+            }
+
+            return wordSearch;
+        }
+
+        /// <summary>
+        /// Parses the given list of lines into a (potentially jagged) "two-dimensional" list of <see cref="char"/>s.
+        /// </summary>
+        /// <param name="lines">The list of lines to parse.</param>
+        /// <returns>The parsed "two-dimensional" list of <see cref="char"/>s.</returns>
+        private static List<List<char>> ParseCharacters(IEnumerable<string> lines)
+        {
+            // Initialize a "2-dimensional" list to hold the filtered characters.
+            var chars = new List<List<char>>();
+
+            // Iterate over each line in the lines list.
+            foreach (var line in lines)
+            {
+                // Filter out any extraneous characters.
+                var row = line.Where(IsKeepable).ToList();
+                
+                // If the row had at least one "keepable" character, add it to the chars list.
+                if (row.Any()) chars.Add(row);
+            }
+
+            return chars;
+        }
     
         /// <summary>
         /// Builds a blank character grid of the given dimensions.
@@ -177,6 +261,16 @@ namespace WordSearchSolver
                     result[row, col] = BlankChar;
             
             return result;
+        }
+
+        /// <summary>
+        /// Determines whether the given character should be kept in a parsed word search.
+        /// </summary>
+        /// <param name="c">The character to check.</param>
+        /// <returns>True if the character should be kept; false otherwise.</returns>
+        private static bool IsKeepable(char c)
+        {
+            return !char.IsWhiteSpace(c);
         }
     }
 }
