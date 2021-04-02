@@ -3,8 +3,12 @@
   &lt;TestAncestor&gt;
     &lt;TestId&gt;xUnit::F97C191B-E993-41CF-B35E-7894F82415A8::net5.0::WordSearchSolverTests.WordSearchTest&lt;/TestId&gt;
     &lt;TestId&gt;xUnit::F97C191B-E993-41CF-B35E-7894F82415A8::net5.0::WordSearchSolverTests.WordLocationTest&lt;/TestId&gt;
+    &lt;TestId&gt;xUnit::F97C191B-E993-41CF-B35E-7894F82415A8::net5.0::WordSearchSolverTests.IterativeSolverTest.Solve_WithTypicalWordSearch_SolvesCorrectly&lt;/TestId&gt;
+    &lt;TestId&gt;xUnit::F97C191B-E993-41CF-B35E-7894F82415A8::net5.0::WordSearchSolverTests.IterativeSolverTest&lt;/TestId&gt;
   &lt;/TestAncestor&gt;
 &lt;/SessionState&gt;</s:String>
+	
+	
 	
 	
 	<s:Boolean x:Key="/Default/ResxEditorPersonal/Initialized/@EntryValue">True</s:Boolean></wpf:ResourceDictionary>

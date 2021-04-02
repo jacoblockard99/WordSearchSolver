@@ -224,6 +224,16 @@ namespace WordSearchSolver
         }
 
         /// <summary>
+        /// Determines whether the given character should be kept in a parsed word search.
+        /// </summary>
+        /// <param name="c">The character to check.</param>
+        /// <returns>True if the character should be kept; false otherwise.</returns>
+        public static bool IsKeepable(char c)
+        {
+            return !char.IsWhiteSpace(c);
+        }
+
+        /// <summary>
         /// Parses the given list of lines into a (potentially jagged) "two-dimensional" list of <see cref="char"/>s.
         /// </summary>
         /// <param name="lines">The list of lines to parse.</param>
@@ -261,16 +271,6 @@ namespace WordSearchSolver
                     result[row, col] = BlankChar;
             
             return result;
-        }
-
-        /// <summary>
-        /// Determines whether the given character should be kept in a parsed word search.
-        /// </summary>
-        /// <param name="c">The character to check.</param>
-        /// <returns>True if the character should be kept; false otherwise.</returns>
-        private static bool IsKeepable(char c)
-        {
-            return !char.IsWhiteSpace(c);
         }
     }
 }

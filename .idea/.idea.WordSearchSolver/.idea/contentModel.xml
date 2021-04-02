@@ -12,7 +12,7 @@
     <e p="$PROJECT_DIR$" t="IncludeFlat">
       <e p="WordSearchSolver" t="IncludeRecursive">
         <e p="ISolver.cs" t="Include" />
-        <e p="Solver.cs" t="Include" />
+        <e p="IterativeSolver.cs" t="Include" />
         <e p="WordLocation.cs" t="Include" />
         <e p="WordSearch.cs" t="Include" />
         <e p="WordSearchSolver.csproj" t="IncludeRecursive" />
@@ -27,6 +27,14 @@
       </e>
       <e p="WordSearchSolver.sln" t="IncludeFlat" />
       <e p="WordSearchSolverTests" t="IncludeRecursive">
+        <e p="IterativeSolverTest.cs" t="Include" />
+        <e p="TestWordSearches" t="Include">
+          <e p="HarryPotter.txt" t="Include" />
+          <e p="HarryPotterWords.txt" t="Include" />
+          <e p="Multiple.txt" t="Include" />
+          <e p="MultipleFromSameLocation.txt" t="Include" />
+          <e p="MultipleFromSameLocationWords.txt" t="Include" />
+        </e>
         <e p="WordLocationTest.cs" t="Include" />
         <e p="WordSearchSolverTests.csproj" t="IncludeRecursive" />
         <e p="WordSearchTest.cs" t="Include" />
