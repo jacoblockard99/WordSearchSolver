@@ -122,59 +122,6 @@ namespace WordSearchSolver
         }
 
         /// <summary>
-        /// Gets a <see cref="string"/> representation of this <see cref="WordSearch"/> by iterating over its grid of
-        /// characters.
-        /// </summary>
-        /// <param name="hSpacing">The amount of horizontal space to add between rows. One by default.</param>
-        /// <param name="vSpacing">The amount of vertical space to add between rows. Zero by default.</param>
-        /// <returns>A <see cref="string"/> containing this word search's grid of characters.</returns>
-        public string Format(int hSpacing = 1, int vSpacing = 0)
-        {
-            var result = new StringBuilder();
-            // Store the requested amount of vertical space, by:
-            //   1) starting with a single newline, which is required no matter what, and
-            //   2) adding extra depending on the spacing parameter.
-            var vSpace = new string('\n', vSpacing + 1);
-
-            // Iterate over each row in the grid of characters.
-            for (var row = 0; row < Height; row++)
-            {
-                // Format each row and append it to the result.
-                result.Append(FormatRow(row, hSpacing));
-                // After every row *except the last* add the appropriate newlines.
-                if (row < Height - 1)
-                    result.Append(vSpace);
-            }
-
-            return result.ToString();
-        }
-        
-        /// <summary>
-        /// Gets a <see cref="string"/> representation of a single row of this <see cref="WordSearch"/>.
-        /// </summary>
-        /// <param name="row">The row to format.</param>
-        /// <param name="spacing">The amount of space to add between each column.</param>
-        /// <returns>A <see cref="string"/> containing the given row's characters.</returns>
-        private string FormatRow(int row, int spacing)
-        {
-            var result = new StringBuilder();
-            // Store the requested amount of horizontal space.
-            var hSpace = new string(' ', spacing);
-            
-            // Iterate over each column in the row.
-            for (var col = 0; col < Width; col++)
-            {
-                // Append each character to the result.
-                result.Append(Chars[row, col]);
-                // After every character *except the last* add the appropriate space.
-                if (col < Width - 1)
-                    result.Append(hSpace);
-            }
-
-            return result.ToString();
-        }
-
-        /// <summary>
         /// Ensures the the given character location is not outside this word search.
         /// </summary>
         /// <param name="row">The row of the character.</param>

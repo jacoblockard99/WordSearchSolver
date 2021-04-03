@@ -11,10 +11,16 @@
     <e p="$USER_HOME$/.nuget/packages/xunit.runner.visualstudio/2.4.3/build/netcoreapp2.1/xunit.runner.visualstudio.dotnetcore.testadapter.dll" t="Include" />
     <e p="$PROJECT_DIR$" t="IncludeFlat">
       <e p="WordSearchSolver" t="IncludeRecursive">
+        <e p="ColorSolutionFormatter.cs" t="Include" />
+        <e p="DummySolutionFormatter.cs" t="Include" />
+        <e p="FormattedChar.cs" t="Include" />
+        <e p="ISolutionFormatter.cs" t="Include" />
         <e p="ISolver.cs" t="Include" />
         <e p="IterativeSolver.cs" t="Include" />
+        <e p="ParenthesesSolutionFormatter.cs" t="Include" />
         <e p="WordLocation.cs" t="Include" />
         <e p="WordSearch.cs" t="Include" />
+        <e p="WordSearchFormatter.cs" t="Include" />
         <e p="WordSearchSolver.csproj" t="IncludeRecursive" />
         <e p="bin" t="ExcludeRecursive" />
         <e p="obj" t="ExcludeRecursive">
@@ -26,8 +32,31 @@
         </e>
       </e>
       <e p="WordSearchSolver.sln" t="IncludeFlat" />
+      <e p="WordSearchSolverConsole" t="IncludeRecursive">
+        <e p="ErrorHandler.cs" t="Include" />
+        <e p="Program.cs" t="Include" />
+        <e p="WordSearchSolverConsole.cs" t="Include" />
+        <e p="WordSearchSolverConsole.csproj" t="IncludeRecursive" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="lib" t="Include">
+          <e p="Asker.dll" t="Include" />
+          <e p="JLCommons.dll" t="Include" />
+        </e>
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="net5.0" t="Include">
+              <e p="WordSearchSolverConsole.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+      </e>
       <e p="WordSearchSolverTests" t="IncludeRecursive">
+        <e p="Helpers" t="Include">
+          <e p="TestSolutionFormatter.cs" t="Include" />
+          <e p="TestUtil.cs" t="Include" />
+        </e>
         <e p="IterativeSolverTest.cs" t="Include" />
+        <e p="ParenthesesSolutionFormatterTest.cs" t="Include" />
         <e p="TestWordSearches" t="Include">
           <e p="HarryPotter.txt" t="Include" />
           <e p="HarryPotterWords.txt" t="Include" />
@@ -36,6 +65,7 @@
           <e p="MultipleFromSameLocationWords.txt" t="Include" />
         </e>
         <e p="WordLocationTest.cs" t="Include" />
+        <e p="WordSearchFormatterTest.cs" t="Include" />
         <e p="WordSearchSolverTests.csproj" t="IncludeRecursive" />
         <e p="WordSearchTest.cs" t="Include" />
         <e p="bin" t="ExcludeRecursive" />

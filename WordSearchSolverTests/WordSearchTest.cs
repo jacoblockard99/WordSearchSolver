@@ -2,22 +2,12 @@ using System;
 using System.Collections.Generic;
 using WordSearchSolver;
 using Xunit;
+using static WordSearchSolverTests.Helpers.TestUtil;
 
 namespace WordSearchSolverTests
 {
     public class WordSearchTest
     {
-        private static char[,] ThreeByFourGrid()
-        {
-            return new[,]
-            {
-                {'a', 'b', 'c'},
-                {'d', 'e', 'f'},
-                {'g', 'h', 'i'},
-                {'j', 'k', 'l'}
-            };
-        }
-        
         // Grid Constructor
 
         [Fact]
@@ -113,40 +103,6 @@ namespace WordSearchSolverTests
             });
             var l = new WordLocation(2, 1, 1, 1, 3);
             Assert.Equal("jot", w.GetWord(l));
-        }
-        
-        // .Format()
-
-        [Fact]
-        public void Format_WithDefaultSpacing_ReturnsProperString()
-        {
-            var w = new WordSearch(ThreeByFourGrid());
-            var expected = "a b c\nd e f\ng h i\nj k l";
-            Assert.Equal(expected, w.Format());
-        }
-
-        [Fact]
-        public void Format_WithNoSpacing_ReturnsUnSpacedString()
-        {
-            var w = new WordSearch(ThreeByFourGrid());
-            var expected = "abc\ndef\nghi\njkl";
-            Assert.Equal(expected, w.Format(0, 0));
-        }
-
-        [Fact]
-        public void Format_WithTwoAndOneSpacing_ReturnsProperlySpacedString()
-        {
-            var w = new WordSearch(ThreeByFourGrid());
-            var expected = "a  b  c\n\nd  e  f\n\ng  h  i\n\nj  k  l";
-            Assert.Equal(expected, w.Format(2, 1));
-        }
-        
-        [Fact]
-        public void Format_WithThreeAndTwoSpacing_ReturnsProperlySpacedString()
-        {
-            var w = new WordSearch(ThreeByFourGrid());
-            var expected = "a   b   c\n\n\nd   e   f\n\n\ng   h   i\n\n\nj   k   l";
-            Assert.Equal(expected, w.Format(3, 2));
         }
         
         // .Parse()

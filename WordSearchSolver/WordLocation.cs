@@ -93,6 +93,62 @@ namespace WordSearchSolver
             Length = length;
         }
 
+        /// <inheritdoc />
+        public override string ToString()
+        {
+            return $"({StartCol}, {StartRow}) through ({EndCol}, {EndRow})";
+        }
+
+        /// <summary>
+        /// Determines whether the specified character location is contained in this word location.
+        /// </summary>
+        /// <param name="row">The row of the location to check.</param>
+        /// <param name="col">The column of the location to check.</param>
+        /// <returns>True if the specified character location is contained within this word location; false
+        /// otherwise.</returns>
+        public bool Contains(int row, int col)
+        {
+            // If the given point is the starting point itself, return true.
+            if (row == StartRow && col == StartCol) return true;
+            
+            // Calculate the distances between this point and the starting point of this word location.
+            var xDistance = col - StartCol;
+            var yDistance = row - StartRow;
+
+            // The given point is contained within this word location if :
+            // 1) It is possible to form a valid horizontal, vertical, or 45-degree diagonal line between the given
+            //    point and the starting point,
+            // 2) That line points in the same direction as the word, and
+            // 3) The distance between the given point and the starting point is less than or equal to the word's
+            //    length.
+            return LiesOnValidLine(xDistance, yDistance)
+                   && LiesOnSameLine(xDistance, yDistance)
+                   && WithinLength(xDistance, yDistance);
+        }
+
+        /// <summary>
+        /// Determines whether the given (potentially) negative distance is within the range of this word.
+        /// </summary>
+        /// <param name="xDistance">The x distance (i.e. column-wise).</param>
+        /// <param name="yDistance">The y distance (i.e. row-wise).</param>
+        /// <returns>True if the given distance is less than or equal to this word's length; false otherwise.</returns>
+        private bool WithinLength(int xDistance, int yDistance)
+        {
+            return Math.Max(Math.Abs(xDistance), Math.Abs(yDistance)) < Length;
+        }
+
+        /// <summary>
+        /// Determines whether the line formed by the given x/y distances points in the same direction as this word.
+        /// </summary>
+        /// <param name="xDistance">The x distance (i.e. column-wise).</param>
+        /// <param name="yDistance">The y distance (i.e. row-wise).</param>
+        /// <returns>True if the given distances form a line pointing in the same direction as this word; false
+        /// otherwise.</returns>
+        private bool LiesOnSameLine(int xDistance, int yDistance)
+        {
+            return Math.Sign(yDistance) == DirectionY && Math.Sign(xDistance) == DirectionX;
+        }
+
         /// <summary>
         /// Validates the direction represented by the given direction integers.
         /// </summary>
@@ -113,6 +169,18 @@ namespace WordSearchSolver
 
             if (directionX == 0 && directionY == 0)
                 throw new ArgumentException(NonDirectionalError);
+        }
+
+        /// <summary>
+        /// Determines whether the line formed by the given x/y distances is a valid line for a word search grid (i.e.
+        /// is completely horizontal, completely vertical, or a 45-degree diagonal).
+        /// </summary>
+        /// <param name="xDistance">The x distance (i.e. column-wise).</param>
+        /// <param name="yDistance">The y distance (i.e. row-wise).</param>
+        /// <returns>True if the line formed by the given distances is valid; false otherwise.</returns>
+        private static bool LiesOnValidLine(int xDistance, int yDistance)
+        {
+            return yDistance == 0 || xDistance == 0 || Math.Abs(yDistance) == Math.Abs(xDistance);
         }
     }
 }
