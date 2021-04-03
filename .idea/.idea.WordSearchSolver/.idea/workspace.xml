@@ -6,24 +6,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c746083e-ea2a-4843-a959-d8a90a0b75a0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/WordSearchSolver/ColorSolutionFormatter.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WordSearchSolver/DummySolutionFormatter.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WordSearchSolver/FormattedChar.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WordSearchSolver/ISolutionFormatter.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WordSearchSolver/ParenthesesSolutionFormatter.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WordSearchSolverConsole/ErrorHandler.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WordSearchSolverConsole/WordSearchSolverConsole.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WordSearchSolverTests/Helpers/TestSolutionFormatter.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WordSearchSolverTests/Helpers/TestUtil.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WordSearchSolverTests/ParenthesesSolutionFormatterTest.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WordSearchSolver/AsteriskSolutionFormatter.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.WordSearchSolver/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.WordSearchSolver/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.WordSearchSolver/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.WordSearchSolver/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WordSearchSolver.sln" beforeDir="false" afterPath="$PROJECT_DIR$/WordSearchSolver.sln" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WordSearchSolver.sln.DotSettings.user" beforeDir="false" afterPath="$PROJECT_DIR$/WordSearchSolver.sln.DotSettings.user" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WordSearchSolver/WordLocation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WordSearchSolver/WordLocation.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WordSearchSolver/WordSearch.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WordSearchSolver/WordSearch.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WordSearchSolverTests/WordLocationTest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WordSearchSolverTests/WordLocationTest.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WordSearchSolverTests/WordSearchTest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WordSearchSolverTests/WordSearchTest.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WordSearchSolverConsole/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WordSearchSolverConsole/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WordSearchSolverConsole/WordSearchSolverConsole.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WordSearchSolverConsole/WordSearchSolverConsole.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,6 +30,7 @@
     <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///home/jacob/RiderProjects/WordSearchSolver/WordSearchSolver/WordLocation.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///home/jacob/RiderProjects/WordSearchSolver/WordSearchSolver/WordLocation.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
@@ -88,24 +76,25 @@
       <option value="$PROJECT_DIR$/WordSearchSolverConsole/ErrorHandler.cs" />
       <option value="$PROJECT_DIR$/WordSearchSolverTests/WordSearchFormatter.cs" />
       <option value="$PROJECT_DIR$/WordSearchSolver/WordSearch.cs" />
-      <option value="$PROJECT_DIR$/WordSearchSolver/DummySolutionFormatter.cs" />
-      <option value="$PROJECT_DIR$/WordSearchSolver/ParenthesesSolutionFormatter.cs" />
       <option value="$PROJECT_DIR$/WordSearchSolverTests/SearchUtil.cs" />
       <option value="$PROJECT_DIR$/WordSearchSolverTests/TestSolutionFormatter.cs" />
       <option value="$PROJECT_DIR$/WordSearchSolver/WordLocation.cs" />
       <option value="$PROJECT_DIR$/WordSearchSolverTests/TestUtil.cs" />
       <option value="$PROJECT_DIR$/WordSearchSolverTests/WordLocationTest.cs" />
-      <option value="$PROJECT_DIR$/WordSearchSolverTests/Helpers/TestSolutionFormatter.cs" />
       <option value="$PROJECT_DIR$/WordSearchSolverTests/WordSearchTest.cs" />
       <option value="$PROJECT_DIR$/WordSearchSolverTests/Helpers/TestUtil.cs" />
       <option value="$PROJECT_DIR$/WordSearchSolverTests/ParenthesesSolutionFormatterTest.cs" />
       <option value="$PROJECT_DIR$/WordSearchSolverTests/WordSearchFormatterTest.cs" />
-      <option value="$PROJECT_DIR$/WordSearchSolverConsole/WordSearchSolverConsole.cs" />
-      <option value="$PROJECT_DIR$/WordSearchSolver/WordSearchFormatter.cs" />
-      <option value="$PROJECT_DIR$/WordSearchSolverConsole/Program.cs" />
       <option value="$PROJECT_DIR$/WordSearchSolver/ISolutionFormatter.cs" />
-      <option value="$PROJECT_DIR$/WordSearchSolver/ColorSolutionFormatter.cs" />
       <option value="$PROJECT_DIR$/WordSearchSolver/FormattedChar.cs" />
+      <option value="$PROJECT_DIR$/WordSearchSolver/ColorSolutionFormatter.cs" />
+      <option value="$PROJECT_DIR$/WordSearchSolver/DummySolutionFormatter.cs" />
+      <option value="$PROJECT_DIR$/WordSearchSolver/ParenthesesSolutionFormatter.cs" />
+      <option value="$PROJECT_DIR$/WordSearchSolver/WordSearchFormatter.cs" />
+      <option value="$PROJECT_DIR$/WordSearchSolverTests/Helpers/TestSolutionFormatter.cs" />
+      <option value="$PROJECT_DIR$/WordSearchSolver/AsteriskSolutionFormatter.cs" />
+      <option value="$PROJECT_DIR$/WordSearchSolverConsole/Program.cs" />
+      <option value="$PROJECT_DIR$/WordSearchSolverConsole/WordSearchSolverConsole.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1qcQgS3cRFggNBTEF7JgiYKG8Nf" />
@@ -173,7 +162,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1617376514797</updated>
-      <workItem from="1617376522934" duration="62052000" />
+      <workItem from="1617376522934" duration="63673000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit">
       <created>1617376554828</created>
@@ -217,7 +206,14 @@
       <option name="project" value="LOCAL" />
       <updated>1617407655562</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Finish basic working program">
+      <created>1617489178762</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1617489178762</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -243,25 +239,7 @@
     <MESSAGE value="Write and test GetWord()" />
     <MESSAGE value="Write and test Parse()" />
     <MESSAGE value="Implement and test solving functionality" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implement and test solving functionality" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/WordSearchSolver/WordSearchFormatter.cs</url>
-          <line>126</line>
-          <properties documentPath="$PROJECT_DIR$/WordSearchSolver/WordSearchFormatter.cs" initialLine="126" containingFunctionPresentation="method 'AppendSpacedChar'">
-            <startOffsets>
-              <option value="5905" />
-            </startOffsets>
-            <endOffsets>
-              <option value="5960" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="20" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="Finish basic working program" />
+    <option name="LAST_COMMIT_MESSAGE" value="Finish basic working program" />
   </component>
 </project>

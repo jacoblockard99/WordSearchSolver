@@ -11,6 +11,7 @@
     <e p="$USER_HOME$/.nuget/packages/xunit.runner.visualstudio/2.4.3/build/netcoreapp2.1/xunit.runner.visualstudio.dotnetcore.testadapter.dll" t="Include" />
     <e p="$PROJECT_DIR$" t="IncludeFlat">
       <e p="WordSearchSolver" t="IncludeRecursive">
+        <e p="AsteriskSolutionFormatter.cs" t="Include" />
         <e p="ColorSolutionFormatter.cs" t="Include" />
         <e p="DummySolutionFormatter.cs" t="Include" />
         <e p="FormattedChar.cs" t="Include" />

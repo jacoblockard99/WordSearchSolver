@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.Design;
+using System.Diagnostics.CodeAnalysis;
 using System.IO;
 using System.Linq;
 using System.Net;
@@ -33,6 +34,45 @@ namespace WordSearchSolverConsole
                 "Searches for overlapping words (words that originate from the" +
                 "same location and point in the same direction).")]
             public bool AllowOverlapping { get; set; }
+            
+            [Option("solutions-format", HelpText = "The method to use to display solutions on the word search. " +
+                                                     "Available options are 'asterisk', 'parentheses', 'color', or" +
+                                                     "'none'. Defaults to 'color'.")]
+            public string SolutionsFormat { get; set; }
+
+
+            [Option('h', "hspace", HelpText = "The amount of space to put between the columns of a formatted word" +
+                                              " search.")]
+            public int HSpace { get; set; } = 1;
+
+            [Option('v', "vspace", HelpText = "The amount of space to put between the rows of a formatted word" +
+                                              " search.")]
+            public int VSpace { get; set; } = 0;
+
+            public ISolutionFormatter GetSolutionFormatter()
+            {
+                if (string.IsNullOrEmpty(SolutionsFormat))
+                    return new ColorSolutionFormatter();
+                
+                switch (SolutionsFormat.ToLower())
+                {
+                    case "asterisk":
+                    case "a":
+                        return new AsteriskSolutionFormatter();
+                    case "parentheses":
+                    case "p":
+                        return new ParenthesesSolutionFormatter();
+                    case "color":
+                    case "c":
+                        return new ColorSolutionFormatter();
+                    case "none":
+                    case "n":
+                        return new DummySolutionFormatter();
+                    default:
+                        Console.WriteLine("The provided solution format was invalid!");
+                        return null;
+                }
+            }
 
             public IEnumerable<string> GetWordSearch()
             {
@@ -94,9 +134,13 @@ namespace WordSearchSolverConsole
             var words = GetWordsSafe(options);
             if (words == null) return;
 
+            var solutionFormatter = options.GetSolutionFormatter();
+            if (solutionFormatter == null) return;
+
             try
             {
-                var w = new WordSearchSolverConsole(wordSearch, words, options.AllowOverlapping, new WordSearchFormatter(new ColorSolutionFormatter()));
+                var f = new WordSearchFormatter(solutionFormatter, options.HSpace, options.VSpace);
+                var w = new WordSearchSolverConsole(wordSearch, words, options.AllowOverlapping, f);
                 if (w.Confirm())
                 {
                     Console.WriteLine();

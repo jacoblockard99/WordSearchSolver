@@ -36,7 +36,7 @@ namespace WordSearchSolverConsole
             Console.WriteLine($"Search Words: {string.Join(", ", Words)}.");
             Console.WriteLine();
             Console.WriteLine("Word Search:");
-            Console.WriteLine(WordSearchFormatter.Default.Format(WordSearch));
+            Console.WriteLine(Formatter.Format(WordSearch));
             Console.WriteLine();
 
             return BooleanAsker.Ask("Look good?");
