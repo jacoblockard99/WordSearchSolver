@@ -36,8 +36,8 @@ namespace WordSearchSolverConsole
             public bool AllowOverlapping { get; set; }
             
             [Option("solutions-format", HelpText = "The method to use to display solutions on the word search. " +
-                                                     "Available options are 'asterisk', 'parentheses', 'color', or" +
-                                                     "'none'. Defaults to 'color'.")]
+                                                     "Available options are 'asterisk', 'parentheses', 'color', " +
+                                                     "'single-color' or 'none'. Defaults to 'color'.")]
             public string SolutionsFormat { get; set; }
 
 
@@ -65,6 +65,10 @@ namespace WordSearchSolverConsole
                     case "color":
                     case "c":
                         return new ColorSolutionFormatter();
+                    case "single-color":
+                    case "singlecolor":
+                    case "sc":
+                        return new SingleColorSolutionFormatter();
                     case "none":
                     case "n":
                         return new DummySolutionFormatter();

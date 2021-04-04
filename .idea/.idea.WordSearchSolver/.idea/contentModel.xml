@@ -12,6 +12,7 @@
     <e p="$PROJECT_DIR$" t="IncludeFlat">
       <e p="WordSearchSolver" t="IncludeRecursive">
         <e p="AsteriskSolutionFormatter.cs" t="Include" />
+        <e p="ColorCycler.cs" t="Include" />
         <e p="ColorSolutionFormatter.cs" t="Include" />
         <e p="DummySolutionFormatter.cs" t="Include" />
         <e p="FormattedChar.cs" t="Include" />
@@ -19,6 +20,7 @@
         <e p="ISolver.cs" t="Include" />
         <e p="IterativeSolver.cs" t="Include" />
         <e p="ParenthesesSolutionFormatter.cs" t="Include" />
+        <e p="SingleColorSolutionFormatter.cs" t="Include" />
         <e p="WordLocation.cs" t="Include" />
         <e p="WordSearch.cs" t="Include" />
         <e p="WordSearchFormatter.cs" t="Include" />
