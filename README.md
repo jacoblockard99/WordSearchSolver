@@ -10,13 +10,12 @@ No official installer curently exists for WordSearchSolver. Standalone compiled 
 
 ```bash
 # ~/.bashrc
-# ...
 alias wordsearchsolver="/home/{user}/RiderProjects/WordSearchSolver/WordSearchSolverConsole/bin/Debug/net5.0/WordSearchSolverConsole"
 ```
 
 You will thus see commands like `wordsearchsolver -f wordsearch.txt -w "Word"`. Depending on your setup, you may have to run something more akin to `./WordSearchSolverConsole ...`.
 
-## Key Concepts
+## Background
 
 A word search puzzle is composed of a uniform grid of letters of arbitrary dimensions. Most of the letters are random, but within the grid a number of words are hidden. These words can start from any location, be any length, and go in any horizontal, vertical, or diagonal direction. The goal of the WordSeachSolver application is to find the locations of these hidden words. It does so by iterating over all the characters in the grid, trying words of all lengths and directions until matches are found.
 
@@ -28,8 +27,8 @@ At a minimum, two pieces of information are required to invoke the WordSearchSol
 
 - **--word-search** — A raw string of characters representing a word search puzzle. Rows are seperated with semicolons (`;`). All whitespace is ignored.
 - **--words, -w** — A string containing the list of search words, seperated with semicolons (`;`). Empty words are not allowed.
-- **--word-search-file, -f** — A path to a file containing a word search puzzle. Within the file, rows are seperated with newlines. Whitespace and empty lines are ignored. This options takes precedence over **--word-search**.
-- **--words-file** — A path to a file containing the list of search words, seperated by newlines. Empty lines are not allowed.
+- **--word-search-file, -f** — A path to a file containing a word search puzzle. Within the file, rows are seperated with newlines. Whitespace and empty lines are ignored. This option takes precedence over **--word-search**.
+- **--words-file** — A path to a file containing the list of search words, seperated by newlines. Empty lines are not allowed. This option takes precedence over **--words, -w**.
 
 For example, take this word search:
 
@@ -121,7 +120,7 @@ Various options exist to control the formatting of word search grids.
 There are two options that control the spacing of formatted word searches:
 
 - **--hspacing, -h** — Controls the amount of space placed between each column of a word search. The default is 1 space.
-- **--vscaping, -v** — Controls the amount of space placed between each row of a word search. The default is no space.
+- **--vspacing, -v** — Controls the amount of space placed between each row of a word search. The default is no space.
 
 #### Solutions Format
 
