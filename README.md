@@ -159,7 +159,7 @@ A word in a word search is essentially a series of adjacent characters that lie 
 
 The reasons why this method was preferred over using a starting location and an ending location are threefold:
 
-1. **It better represents the data.** It is not possible in a word search to have a diagonal line with a slope other than 1. Using the direction method described above, only valid lines are even possible. With the start/end coordinate method, validations would be needed to ensure that, for example, a line from (0, 0) to (1, 2) is not possible.
+1. **It better represents the data.** It is not possible in a word search to have a diagonal line with a slope other than 1 or -1. Using the direction method described above, only valid lines are even possible. With the start/end coordinate method, validations would be needed to ensure that, for example, a line from (0, 0) to (1, 2) is not possible.
 2. **The direction method fits the solving algorithm.** Because the solving algorithm (see below) uses a very similar process—starting from one location and moving in a certain direction so many times—no conversion is necessary with the direction method to get a `WordLocation` when a match is found.
 3. **The direction method makes it easier to check for constituent characters.** In order to properly format solutions on a word search grid, the application must be able to check whether a certain coordinate is contained in a `WordLocation`. This is far easier with the direction method than otherwise.
 
