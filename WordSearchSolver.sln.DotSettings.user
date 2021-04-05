@@ -1,7 +1,17 @@
 ﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
 	<s:Boolean x:Key="/Default/AddReferences/RecentPaths/=_002Fhome_002Fjacob_002FRiderProjects_002FWordSearchSolver_002FWordSearchSolverConsole_002Flib_002FAsker_002Edll/@EntryIndexedValue">True</s:Boolean>
 	<s:Boolean x:Key="/Default/AddReferences/RecentPaths/=_002Fhome_002Fjacob_002FRiderProjects_002FWordSearchSolver_002FWordSearchSolverConsole_002Flib_002FJLCommons_002Edll/@EntryIndexedValue">True</s:Boolean>
-	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=3afd01f7_002Dd0a3_002D4d7b_002Dafa5_002D87fc7ebc3d8e/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="WordSearchTest" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=3afd01f7_002Dd0a3_002D4d7b_002Dafa5_002D87fc7ebc3d8e/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="WordSearchTest" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;TestAncestor&gt;
+    &lt;TestId&gt;xUnit::F97C191B-E993-41CF-B35E-7894F82415A8::net5.0::WordSearchSolverTests.WordSearchTest&lt;/TestId&gt;
+    &lt;TestId&gt;xUnit::F97C191B-E993-41CF-B35E-7894F82415A8::net5.0::WordSearchSolverTests.WordLocationTest&lt;/TestId&gt;
+    &lt;TestId&gt;xUnit::F97C191B-E993-41CF-B35E-7894F82415A8::net5.0::WordSearchSolverTests.IterativeSolverTest.Solve_WithTypicalWordSearch_SolvesCorrectly&lt;/TestId&gt;
+    &lt;TestId&gt;xUnit::F97C191B-E993-41CF-B35E-7894F82415A8::net5.0::WordSearchSolverTests.IterativeSolverTest&lt;/TestId&gt;
+    &lt;TestId&gt;xUnit::F97C191B-E993-41CF-B35E-7894F82415A8::net5.0::WordSearchSolverTests.WordSearchFormatterTest&lt;/TestId&gt;
+    &lt;TestId&gt;xUnit::F97C191B-E993-41CF-B35E-7894F82415A8::net5.0::WordSearchSolverTests.ParenthesesSolutionFormatterTest&lt;/TestId&gt;
+  &lt;/TestAncestor&gt;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=5fd3667c_002D8244_002D4cb9_002D8643_002D858eea31809a/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="WordSearchTest #2" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
   &lt;TestAncestor&gt;
     &lt;TestId&gt;xUnit::F97C191B-E993-41CF-B35E-7894F82415A8::net5.0::WordSearchSolverTests.WordSearchTest&lt;/TestId&gt;
     &lt;TestId&gt;xUnit::F97C191B-E993-41CF-B35E-7894F82415A8::net5.0::WordSearchSolverTests.WordLocationTest&lt;/TestId&gt;

@@ -6,12 +6,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c746083e-ea2a-4843-a959-d8a90a0b75a0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/WordSearchSolver/ColorCycler.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WordSearchSolver/SingleColorSolutionFormatter.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WordSearchSolverTests/TestWordSearches/Huge.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.WordSearchSolver/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.WordSearchSolver/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.WordSearchSolver/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.WordSearchSolver/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WordSearchSolver/ColorSolutionFormatter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WordSearchSolver/ColorSolutionFormatter.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WordSearchSolverConsole/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WordSearchSolverConsole/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WordSearchSolver.sln" beforeDir="false" afterPath="$PROJECT_DIR$/WordSearchSolver.sln" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WordSearchSolver/IterativeSolver.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WordSearchSolver/IterativeSolver.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,33 +21,9 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///home/jacob/RiderProjects/WordSearchSolver/WordSearchSolver/WordSearch.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///home/jacob/RiderProjects/WordSearchSolver/WordSearchSolver/WordSearch.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///home/jacob/RiderProjects/WordSearchSolver/WordSearchSolver/WordLocation.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///home/jacob/RiderProjects/WordSearchSolver/WordSearchSolver/WordSearch.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///home/jacob/RiderProjects/WordSearchSolver/WordSearchSolver/WordLocation.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///home/jacob/RiderProjects/WordSearchSolver/WordSearchSolver/WordLocation.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///home/jacob/RiderProjects/WordSearchSolver/WordSearchSolverTests/WordLocationTest.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///home/jacob/RiderProjects/WordSearchSolver/WordSearchSolverTests/WordSearchTest.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///home/jacob/RiderProjects/WordSearchSolver/WordSearchSolverTests/WordSearchTest.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/7B0E68FB-0F8D-41F5-BCB9-1A28A134F155/4f/d3055de6/Enumerable.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///home/jacob/RiderProjects/WordSearchSolver/WordSearchSolverTests/WordLocationTest.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///home/jacob/RiderProjects/WordSearchSolver/WordSearchSolver/WordSearch.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/377B61B6-13EA-444F-826F-377D9474FFCA/e4/640008f2/TestInvoker`1.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/7B0E68FB-0F8D-41F5-BCB9-1A28A134F155/4f/d3055de6/Enumerable.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
@@ -67,12 +42,8 @@
       <option value="$PROJECT_DIR$/WordSearchSolverTests/TestWordSearches/Multiple.txt" />
       <option value="$PROJECT_DIR$/WordSearchSolverTests/TestWordSearches/MultipleFromSameLocationWords.txt" />
       <option value="$PROJECT_DIR$/WordSearchSolverTests/TestWordSearches/MultipleFromSameLocation.txt" />
-      <option value="$PROJECT_DIR$/WordSearchSolver/IterativeSolver.cs" />
       <option value="$PROJECT_DIR$/WordSearchSolverTests/EntryPoint.cs" />
       <option value="$PROJECT_DIR$/WordSearchSolverTests/IterativeSolverTest.cs" />
-      <option value="$PROJECT_DIR$/WordSearchSolverTests/TestWordSearches/HugeWords.txt" />
-      <option value="$PROJECT_DIR$/WordSearchSolverBenchmarks/Program.cs" />
-      <option value="$PROJECT_DIR$/WordSearchSolverTests/TestWordSearches/Huge.txt" />
       <option value="$PROJECT_DIR$/WordSearchSolverConsole/WordSearchSolver.cs" />
       <option value="$PROJECT_DIR$/WordSearchSolverConsole/ErrorHandler.cs" />
       <option value="$PROJECT_DIR$/WordSearchSolverTests/WordSearchFormatter.cs" />
@@ -96,9 +67,13 @@
       <option value="$PROJECT_DIR$/WordSearchSolverConsole/WordSearchSolverConsole.cs" />
       <option value="$PROJECT_DIR$/WordSearchSolver/TerminalColor.cs" />
       <option value="$PROJECT_DIR$/WordSearchSolver/ColorSolutionFormatter.cs" />
-      <option value="$PROJECT_DIR$/WordSearchSolver/ColorCycler.cs" />
       <option value="$PROJECT_DIR$/WordSearchSolver/SingleColorSolutionFormatter.cs" />
       <option value="$PROJECT_DIR$/WordSearchSolverConsole/Program.cs" />
+      <option value="$PROJECT_DIR$/WordSearchSolver/ColorCycler.cs" />
+      <option value="$PROJECT_DIR$/WordSearchSolver/IterativeSolver.cs" />
+      <option value="$PROJECT_DIR$/WordSearchSolverBenchmarks/Program.cs" />
+      <option value="$PROJECT_DIR$/WordSearchSolverTests/TestWordSearches/HugeWords.txt" />
+      <option value="$PROJECT_DIR$/WordSearchSolverTests/TestWordSearches/Huge.txt" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1qcQgS3cRFggNBTEF7JgiYKG8Nf" />
@@ -116,7 +91,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/WordSearchSolverConsole/lib/JLCommons.dll" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
-  <component name="RunManager" selected=".NET Project.WordSearchSolverConsole">
+  <component name="RunManager" selected="3afd01f7-d0a3-4d7b-afa5-87fc7ebc3d8e">
     <configuration name="WordSearchSolverBenchmarks" type="DotNetProject" factoryName=".NET Project">
       <option name="EXE_PATH" value="" />
       <option name="PROGRAM_PARAMETERS" value="" />
@@ -166,7 +141,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1617376514797</updated>
-      <workItem from="1617376522934" duration="67811000" />
+      <workItem from="1617376522934" duration="68715000" />
+      <workItem from="1617497669201" duration="3380000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit">
       <created>1617376554828</created>
@@ -224,13 +200,20 @@
       <option name="project" value="LOCAL" />
       <updated>1617490473347</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Add more color capabilities">
+      <created>1617495466941</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1617495466941</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
-  <component name="UnityProjectConfiguration" hasMinimizedUI="null" />
+  <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -242,6 +225,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
@@ -252,6 +236,27 @@
     <MESSAGE value="Implement and test solving functionality" />
     <MESSAGE value="Finish basic working program" />
     <MESSAGE value="Allow specification of word search format" />
-    <option name="LAST_COMMIT_MESSAGE" value="Allow specification of word search format" />
+    <MESSAGE value="Add more color capabilities" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add more color capabilities" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <condition expression="row == 0 &amp;&amp; col == 9 &amp;&amp; directionX == -1 &amp;&amp; directionY == 0" language="C#" />
+          <url>file://$PROJECT_DIR$/WordSearchSolver/IterativeSolver.cs</url>
+          <line>125</line>
+          <properties documentPath="$PROJECT_DIR$/WordSearchSolver/IterativeSolver.cs" initialLine="116" containingFunctionPresentation="method 'TryCharacterInDirection'">
+            <startOffsets>
+              <option value="5721" />
+            </startOffsets>
+            <endOffsets>
+              <option value="5759" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

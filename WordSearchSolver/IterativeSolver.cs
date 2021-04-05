@@ -44,6 +44,8 @@ namespace WordSearchSolver
         /// <param name="wordSearch">The words search to solve.</param>
         /// <param name="words">The list of words to find.</param>
         /// <param name="allowOverlappingWords">Whether to try and find overlapping words (words that start from the
+        /// <param name="proactiveSearch">Whether to proactively check whether a match is even possible while
+        /// searching.</param>
         /// same location and point in the same direction).</param>
         public IterativeSolver(WordSearch wordSearch, IEnumerable<string> words, bool allowOverlappingWords = false)
         {
@@ -123,8 +125,28 @@ namespace WordSearchSolver
             // Add the character at the current row and column to the current word.
             currentWord += WordSearch.Chars[currentRow, currentCol];
 
+            var anyPossible = false;
+            var match = false;
+
+            // Iterate over every search word. If any are found that begin with the current word, then there is still a
+            // possibility that a match will be found. If any are found that *equal* the current word, then we've found
+            // a match.
+            foreach (var word in Words)
+            {
+                if (word == currentWord)
+                {
+                    match = true;
+                    break;
+                }
+                if (word.StartsWith(currentWord))
+                    anyPossible = true;
+            }
+
+            // If there is no possibility for a match, return.
+            if (!match && !anyPossible) return;
+
             // Check if the word is a match.
-            if (Words.Contains(currentWord))
+            if (match)
             {
                 // If so add the match and return.
                 // Note that, due to the return, multiple words from the same location in the same direction
