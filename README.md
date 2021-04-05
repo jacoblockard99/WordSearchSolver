@@ -4,7 +4,7 @@
 
 WordSearchSolver is a simple little console application written in C# that solves word search puzzles, given a list of search words.
 
-## Installation (or lack therof)
+## Installation (or lack thereof)
 
 No official installer curently exists for WordSearchSolver. Standalone compiled executables are available on the GitHub releases page. Additionally, in this document, a bash alias has been set like so:
 
