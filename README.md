@@ -1,6 +1,6 @@
 # WordSearchSolver
 
-[![Maintainability](https://api.codeclimate.com/v1/badges/60e61aed0a432d401a01b106/maintainability)](https://codeclimate.com/github/codeclimate/codeclimate/maintainability)
+[![Maintainability](https://api.codeclimate.com/v1/badges/eff8c5c768f4d7738011/maintainability)](https://codeclimate.com/github/jacoblockard99/WordSearchSolver/maintainability)
 
 ## Introduction
 
