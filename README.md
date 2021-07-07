@@ -30,7 +30,7 @@ At minimum, two pieces of information are required to invoke the WordSearchSolve
 - **--word-search-file, -f** — A path to a file containing a word search puzzle. Within the file, rows are seperated with newlines. Whitespace and empty lines are ignored. This option takes precedence over **--word-search**.
 - **--words-file** — A path to a file containing the list of search words, seperated by newlines. Empty lines are not allowed. This option takes precedence over **--words, -w**.
 
-For example, take this word search:
+For example, consider this word search:
 
 ```
 A C C
