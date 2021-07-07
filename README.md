@@ -1,5 +1,7 @@
 # WordSearchSolver
 
+[![Maintainability](https://api.codeclimate.com/v1/badges/60e61aed0a432d401a01b106/maintainability)](https://codeclimate.com/github/codeclimate/codeclimate/maintainability)
+
 ## Introduction
 
 WordSearchSolver is a simple little console application written in C# that solves word search puzzles, given a list of search words.
